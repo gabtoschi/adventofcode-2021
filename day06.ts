@@ -1,7 +1,7 @@
 import * as aoc from './utils/aoc';
 import { input06 } from './inputs';
 
-const fish = aoc.lines(input06)[0].split(',').map(str => parseInt(str));
+const fish = aoc.ints(input06, ',');
 
 function simulateFish(originalFish: number[], days: number, cycleMax = 6, birthDelay = 2): number {
   const newbornStartTimer = cycleMax + birthDelay;
