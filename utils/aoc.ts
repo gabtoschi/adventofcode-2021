@@ -14,3 +14,10 @@ export function digits(data: string, lineSeparator = '\n'): number[][] {
 export function answer(star: 1 | 2, answer: any) {
   console.log(`Star #0${star}: ${answer.toString()}`);
 }
+
+export const ortogAdjacent = [[-1, 0], [1, 0], [0, -1], [0, 1]];
+export const diagAdjacent = [[-1, -1], [-1, 1], [1, -1], [1, 1]];
+export const fullAdjacent = [...ortogAdjacent, ...diagAdjacent];
+
+export const isMatrixPositionValid = (row: number, col: number, height: number, width: number) =>
+  (row >= 0 && row < height && col >= 0 && col < width);
